@@ -4,7 +4,7 @@ import bs4
 from bs4 import BeautifulSoup
 import fake_headers
 from unicodedata import normalize
-
+from Decorators.decoratos_1 import logger
 
 class Web_scraping:
 
@@ -42,7 +42,7 @@ class Web_scraping:
                                      'company': name_company_hh,
                                      'city': city_hh})
         return self.parsed_data
-
+    @logger
     def download_parsed_data_json(self):
         """Скачивание данных в файл json"""
 
