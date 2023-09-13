@@ -7,7 +7,6 @@ class MyTestCase(TestCase):
         self.ya = Ya_disk()
     def test_create_folder(self):
 
-        # name_folder = 'test_create_folder'
         result = self.ya.create_folder('test_folder')
         expected = 'test_create_folder'
         self.assertNotEquals(expected, result)

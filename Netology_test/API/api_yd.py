@@ -1,5 +1,7 @@
 import requests
 from Netology_test.tests.config import tokenyandex
+
+
 class Ya_disk:
 
     def __init__(self):
@@ -10,7 +12,6 @@ class Ya_disk:
         headers = {'Authorization': tokenyandex}
         response_profile = requests.get('https://cloud-api.yandex.net/v1/disk/', headers=headers)
         return response_profile.status_code
-
 
     def create_folder(self, id_screen_name):
         """Метод создания папки на Я.Диске с ID пользователя VK"""
@@ -24,15 +25,8 @@ class Ya_disk:
         return self.folder_name
 
 
-
-
-
-
 if __name__ == '__main__':
     id = 'test_folder'
     ya = Ya_disk()
     ya.create_folder(id)
     ya.response_status()
-
-
-
